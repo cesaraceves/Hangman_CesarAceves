@@ -1,5 +1,7 @@
 # Import modules to use
 from words import palabras
+from colorama import Fore,Style, init
+init()
 import random
 
 
@@ -14,7 +16,7 @@ def key_word(palabras):
 
 
 for i in key_word(palabras):
-    print(" _ ",end="")
+    print(Fore.RED + " _ ",end="")
 print("")
 
 
