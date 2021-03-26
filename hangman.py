@@ -1,8 +1,8 @@
 from words import palabras, vidas_pic
 import random
-import colorama #c
-from colorama import Fore,init#c
-init()#c
+import colorama 
+from colorama import Fore,init
+init()
 colors = list(vars(colorama.Fore).values())#c paleta de colores
 
 vidas = 0
@@ -16,13 +16,13 @@ def good_word(words):
 print(Fore.CYAN +"\nBienvenido al juego del ahorcado: (;")
 print(Fore.CYAN +"Esta es la palabra a adivinar\n")
 word = good_word(palabras).upper()
-word_list = list(word) #separa las letras en una lista
-count_letters = len(word_list) #cantidad de letras a adivinar
+word_list = list(word) #Separa las letras en una lista
+count_letters = len(word_list) #Cantidad de letras a adivinar
 
 while count_letters > 0 or vidas == 6:
     print(Fore.GREEN +"Adivina la palabra o frase")
 
-    print(word_list)
+    
     for i in word_list:
         if i.isupper():
             #print(" _ ",end="")
@@ -45,7 +45,7 @@ while count_letters > 0 or vidas == 6:
             vidas = vidas + 1 
         else:                
             count_letters = count_letters - con #letra menos           
-            #print("Bien!, te faltan solo ",count_letters)
+            #print("Vamos bien, te faltan solamente ",count_letters)
 
         print(Fore.CYAN + vidas_pic[vidas])
         if vidas == 6:
